@@ -1,0 +1,409 @@
+﻿master
+
+1.1.4.3
+- dnsev-h
+  + Update to X-links: https://dnsev-h.github.io/x-links/
+
+1.1.4.2
+- dnsev-h
+  + Improved debug version of the script (better logging messages)
+
+1.1.4.1
+- dnsev-h
+  + Fixed a bug that would result in certain page thumbnails not being displayed
+  + Added a "site:" option for filters
+  + Added page indicators for links
+
+1.1.4
+- dnsev-h
+  + Fixed a bug that would display certain categories from hitomi incorrectly
+  + Fixed hover details sometimes having elements that overflow improperly
+  + Fixed bottom navigation links on 4chan not working properly
+  + Added options to disable link processing depending on the link's site
+  + Code cleanup and various performance tweaks
+
+1.1.3.1
+- dnsev-h
+  + Fixed a bug that would break linkification on some sites
+  + Page thumbnails from hitomi are now fetched using https
+
+1.1.3
+- dnsev-h
+  + Fixed a bug causing links to stop linkifying when using the 4chan-inline extension
+  + Gallery page thumbnail fetching now follows referrer hiding rules
+  + Added page thumbnail display for nhentai and hitomi galleries
+
+1.1.2.1
+- dnsev-h
+  + Added an animation to the gallery page thumbnail to make it appear more smoothly the first time
+  + Lowered the delay used to fetch thumbnails
+
+1.1.2
+- dnsev-h
+  + Fixed a bug that could cause styles to not update properly
+  + Added ability to fall back to g.e-hentai.org when sad panda is encountered
+  + Added ability to check exhentai.org when g.e-hentai.org links fail
+  + Added ability to bypass content warnings on g.e-hentai.org
+  + Added page thumbnail display for links to a page of a gallery
+
+1.1.1
+- dnsev-h
+  + Added support for the e-hentai forums
+
+1.1.0.2
+- dnsev-h
+  + Fixed a bug causing certain e*hentai page URLs to return errors
+
+1.1.0.1
+- dnsev-h
+  + Fixed a bug causing reverse image search errors to be cached
+  + The ExSauce link error related to JPEG images now displayes differently
+  + Reverse image search results now have a link to both exhentai and e-hentai
+  + Improved logging for HTTP requests
+
+1.1.0
+- dnsev-h
+  + Fixed a bug causing repeated links to sometimes not format properly
+  + Fixed a bug causing filters to throw errors
+  + Fixed a bug causing bad filters not to sort properly in the Easy List
+  + Fixed a bug causing the Easy List to not group by category
+  + Added an Easy List option for hiding entries based on filters
+  + Added an Easy List option for showing a custom list of links (from a pastebin, for example)
+  + Added http support for desustorage.org
+  + Added support for fgts.jp
+  + Complete restructuring for API / HTTP requests
+  + Errors are now cached, resulting in less API requests on pages with faulty links
+  + Reverse image similarity search lookup results are now cached better
+  + Duplicate requests for the same gallery should no longer occur
+  + Reverse image search now works on site configurations lacking image MD5 information
+  + Improved debug logging
+  + Various internal improvements
+
+1.0.10
+- dnsev-h
+  + Fixed some features not working when using the 4chan-inline extension
+  + Fixed links not being able to have titles if automatic processing is disabled
+  + Fixed a bug causing gallery details to sometimes flicker
+  + Made custom filters in the Easy List have greater priority than the standard filters
+  + Changed how gallery actions are displayed; they share less redundant information with gallery details now
+
+1.0.9.1
+- dnsev-h
+  + Fixed a bug related to filter caching preventing the easy list from being opened
+
+1.0.9
+- dnsev-h
+  + Fixed some potentially buggy code dealing with removed DOM nodes
+  + Fixed some potentially buggy code related to threads with 1000+ posts
+  + Fixed a filtering bug related to bad filters not taking priority
+  + Fixed a filtering bug causing tags to not highlight properly when using not: or only:
+  + Fixed filtering not applying to certain categories when using not: or only:
+  + Fixed and updated the styling on the filtering guide
+  + Added ordering priority to filters; filters later in the list have greater priority
+  + Improved load times on pages with lots of links and posts, again
+
+1.0.8
+- dnsev-h
+  + Improved load times on pages with lots of links
+  + Improved organization of settings and removed some options that are unlikely to be used
+
+1.0.7
+- dnsev-h
+  + Fixed a bug causing bad filters to not take priority in some circumstances
+  + Added a removed indicator on hover details for removed galleries
+  + Added fuuka as a site configuration
+  + Added a debug version
+  + Slight changes to stylings
+  + Source code repository cleanup
+
+1.0.6
+- dnsev-h
+  + Fixed a linkification conflict with 4chan-x involving quoted links
+  + Fixed a bug that could cause linkification to stop on galleries with no tags
+  + Fixed a bug involving cache data time-to-live being treated incorrectly
+  + Fixed a bug causing filters to not be applied to links to a specific page of a gallery
+  + Added hitomi.la thumbnail capability
+  + Added an option to remove referrer information on thumbnail requests
+  + Added desustorage.org to list of usable sites
+
+1.0.5
+- dnsev-h
+  + Fixed a bug where the database would not properly store data
+  + Fixed navigation links not being lower case on 8ch
+  + Fixed the Easy List occasionally fetching full info from the wrong domain
+  + Changed update/changelog URLs
+  + Removed obsolete options
+  + Code refactor
+
+1.0.4
+- dnsev-h
+  + Fixed a bug on 8ch that would cause excessive auto-reload requests and not display new posts
+  + Fixed a bug when using the 4chan-inline extension that would cause links to not work
+  + Fixed the changelog not being able to be closed by clicking the dimmer
+  + Added a link to the EasyList to the 4chan-x header bar
+  + Added an option to disable web-font loading from Google
+  + Added a settings import/export options
+  + Removed the [Easy List] link on the catalog and 7-day archive
+  + Made the settings link appear in the menu on appchan-x
+  + Made the settings link appear on the 4chan-inline extension's header bar
+
+1.0.3
+- dnsev-h
+  + Fixed a bug that could cause similarity image search to fail
+  + Fixed a bug that would prevent the Easy List from changing sort order
+  + ExSauce now works on posts with multiple images (tinyboard)
+  + Settings styling changed to be more similar to the Easy List
+  + Changelog now displayed on update
+  + Code cleanup and performance updates
+
+1.0.2
+- dnsev-h
+  + Fixed a bug causing intense scrolling lag when using 4chan-x
+  + Restored theme detection on Chrome
+
+1.0.1
+- dnsev-h
+  + Replace "Smart Links" with a new option that does the same thing, plus allows users to force e*hentai sites to use eh or ex
+  + Fixed hovering elements not hiding when using OneeChan
+  + Removed links receiving double event listeners
+  + Fixed hovering details being positioned wrong in Chrome
+  + Added an option to change the horizontal hovering offset (to mimic ExLinks behavior)
+
+1.0
+- dnsev-h
+  + Major rewrite of ExLinks with a name change to H-links
+  + It's not worthwhile to try and detail every change here; read the commit history
+
+==========
+
+2.3.4
+- Daiz
+  + Fix: Another edge case linkification failure now works properly
+
+2.3.3
+- Daiz
+  + Fix: Broken gallery links don't break linkification on future auto-updates
+
+2.3.2
+- Daiz
+  + Fix: Edge case linkification failure now works properly
+
+2.3.1
+- Daiz
+  + Change: Reverse Image Search is now disabled for JPG images because 4chan manipulates them on upload, effectively making search by file hash useless.
+
+2.3.0
+- nixx
+  + Feature: HTTPS support
+- Daiz
+  + Change: HTTPS->HTTP redirection removed
+  + Add: ExLinks now runs on archive.moe (for real this time)
+
+2.2.7
+- Daiz
+  + Fix: Quick patch to make ExLinks work again
+  + Other: Change tabs to spaces in this changelog
+
+2.2.6
+- Daiz
+  + Fix: Make HTTPS->HTTP redirection work with debug mode off
+  + Change: Don't run on archive.moe afterall to forced HTTPS
+
+2.2.5
+- Daiz
+  + Add: ExLinks now runs on archive.moe
+
+2.2.4
+- Daiz
+  + Feature: Redirect HTTPS to HTTP
+
+2.2.3
+- Hupo
+  + Fix: ExLinks now works in board index pages again
+
+2.2.2
+- Hupo
+  + Fix: "ExLinks Settings" 4chan X menu entry only shows up in header menu now
+
+2.2.1
+- Hupo
+  + Fix: Reverse image search works with 4chan X again
+  + Fix: ExLinks work properly with 4chan X's Linkify now
+
+2.2.0
+- Hupo
+  + Feature: Basic 38chan support. Links work, reverse image searching doesn't.
+  + Fix: ExLinks now works on Foolz Beta as well
+  + Fix: Fix options background on Foolz
+  + Fix: Reverse image search now always looks for results in all categories
+  + Fix: No more "undefined" values in debug logging
+
+2.1.13
+- Hupo
+  + Fix: Cache purging is now logged properly when debug mode is turned on
+
+2.1.12
+- Hupo
+  + Fix: Old cache entries are now actually purged
+
+2.1.11
+- Hupo
+  + Fix: Reverse image search should work for thumbnail view users again
+
+2.1.10
+- Hupo
+  + Fix: Reverse image search should return results properly again
+
+2.1.9
+- Hupo
+  + Fix: 4chan X v3 menu event should not fire with 4chan X v2 now
+
+2.1.8
+- Hupo
+  + Add: 4chan X v3 menu integration for opening settings
+  + Fix: Posts ending in <wbr> no longer break things
+
+2.1.7
+- Hupo
+  + Change: Minor performance improvement in <wbr> removal
+  + Fix: ExLinks works in <s>-spoilers now
+
+2.1.6
+- Hupo
+  + Fix: Make sure no <wbr> elements are removed outside links
+  + Fix: Squashed a bug in <wbr> removal that could stop the whole script
+  + Fix: Linkifier now handles https links properly
+
+2.1.5
+- Hupo
+  + Fix: Remove link-breaking <wbr> elements in the middle of links (if present)
+
+2.1.4
+- Hupo
+  + Fix: Archiver URL is correct again
+  + Change: Archiver URL will always point to exhentai for fjorded galleries
+
+2.1.3
+- Hupo
+  + Fix: ExSauce doesn't break on deleted files anymore
+
+2.1.2
+- Hupo
+  + Add: High-res image elements (category icons & stars)
+  + Fix: Star rating actually matches properly now
+
+2.1.1
+- Hupo
+  + Add: "No Underline in Sauce" option for ExSauce (default: false)
+  + Fix: Details has a background in archive again
+
+2.1.0
+- Hupo
+  + Feature: ExSauce for 4chan (not available for Opera)
+  + Add: ExSauce now comes with ExLinks-powered inline results
+  + Add: Lots of new options for ExSauce
+
+2.0.6
+- Hupo
+  + Fix: Made it work again
+
+2.0.5
+- Hupo
+  + Fix: Malformed links are now properly ignored
+
+2.0.4
+- Hupo
+  + Add: Failure detection during link formatting (should hopefully fix any issues with links sometimes not getting formatted)
+  + Add: Smart Links updated to recognize galleries tagged with "abortion"
+  + Add: New debugging option to load all cached metadata to current database on site load
+  + Change: Debugging settings moved to the bottom of options
+  + Change: "Disable Local Storage Cache" moved to debugging options
+  + Fix: Link parsing updated again to not break on management URLs
+  + Fix: Now works with the latest 4chan code update
+
+2.0.3
+- Hupo
+  + Feature: Debug Mode, which logs some statistics to your browser console if enabled
+  + Feature: Opera support... but usage is not recommended due to lack of mutation observers
+  + Feature: New option "Show by Default" for gallery actions (default: false)
+  + Fix: Options dialog now has a proper height in Firefox
+  + Fix: E-Hentai forum links are now parsed properly
+
+2.0.0
+- Hupo
+  + Feature: Harder, Better, Faster, Stronger
+  + Feature: Now on GitHub!
+  + Feature: Thumbnail View has evolved into Details View
+  + Feature: Info View has evolved into Actions View
+  + Feature: Gallery metadata fetching is now done on page links (/s/...) too
+  + Feature: Gallery metadata caching with HTML5 Local / Session Storage
+  + Feature: URL parsing has been improved in both speed and accuracy
+  + Feature: No more cooldown for gallery thumbnail fetching
+  + Feature: Archiver link is instantly usable after fetching
+  + Feature: Options dialog, stylistically compatible with vanilla 4chan, OneeChan and 4chan SS
+  + Feature: Gallery metadata lookup via E-Hentai Public JSON API
+  + Change: Automatic link formatting has been re-enabled
+  + Change: "Intelligent Fetching" has been renamed to "Smart Links"
+  + Change: Smart Links doesn't do color highlighting anymore (but The Button reflects the link destination)
+  + Change: Some pointless user options were removed
+  + Change: Favorite autosave has been removed temporarily
+  + Fix: Pretty much anything that didn't work right in earlier versions
+
+1.7.4
+- Hupo
+  + Change: Disabled link preloading because of load limits imposed on .hathdl fetching
+
+1.7.3
+- Hupo
+  + Feature: Now works in the Foolz archive
+
+1.7.2
+- Anonymous
+  + Feature: Intelligent fetching (disabled by default)
+  + Feature: Add to favorites (defaults to a pop-up, can be made automatic)
+  + Fix: 4chan X inline quotes work properly again
+
+1.5.7
+- Hupo
+  + Change: Torrent view now opens as a pop-up by default (customizable)
+  + Change: Archiver link now has strikethrough initially (since it requires fetching the thumbnail)
+  + Fix: Cursor icon changes to pointer on pop-up links
+  + Fix: Pop-up links can now be opened to new tabs
+
+1.5.5
+- Hupo
+  + Feature: Plenty of new configuration options
+  + Feature: File count and links bar in detail view
+  + Fix: Working thumbnail (and archiver link) fetching in inline quotes
+  + Change: Separate button for detail view removed, replaced by fetch button after fetching
+
+1.3.7
+- Hupo
+  + Fix: Thumbnail hover no longer goes offscreen
+  + Feature: Thumbnail hover reports on load failure
+  + Change: Thumbnail loading improved to avoid loading the same image multiple times
+
+1.3.5
+- Hupo
+  + Change: Thumbnail fetching no longer on name expansion, now activates on gallery name hover
+  + Change: Gallery name fetching defaults to g.e-hentai.org
+  + Feature: Thumbnail fetching cooldown to prevent autoban
+
+1.2.5
+- Hupo
+  + Feature: Gallery thumbnail fetching along with the name
+  + Feature: Customizable fetching options
+  + Fix: Doesn't break 4chan X anymore
+  + Change: File count removed from detailed view
+
+1.1.0
+- Anonymous
+  + Change: Gallery name is now fetched from H@H download info
+  + Feature: Expandable details view with tags and file count
+  + Feature: Automatic link processing
+  + Fix: Accidental quote removal
+
+1.0.0
+- Hupo
+  + Feature: Manual gallery name fetching from gallery torrent page
+  + Feature: Turn all exhentai/e-hentai gallery URLs to actual links

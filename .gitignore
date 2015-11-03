@@ -1,0 +1,12 @@
+.workspace
+tmp/
+old/
+tools/
+node_modules/
+*.pdn
+*.sublime*
+test/
+
+*.lnk
+post_build.bat
+post_build.sh
